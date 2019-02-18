@@ -11,12 +11,25 @@ Receive_Transmit::Receive_Transmit(int pin1, int pin2, bool receive)
 
 void Receive_Transmit::initialize()
 {
+const byte address[6]="00001";  
 if(_receive==true){
   //initialization for receiving data
+  /*radio.begin();
+  radio.openReadingPipe(0,address);
+  radio.setPALevel(RF24_PA_MIN);
+  radio.startListening();
 }
 else{
   //initialization for sending data
-}
+  radio.begin();
+  radio.openWritingPipe(address);
+  radio.setPALevel(RF24_PA_MIN);
+  radio.stopListening();*/
+}}
+
+void Receive_Transmit::transmit(int x)
+{
+  //radio.write(&x, sizeof(x));
 }
 
 
