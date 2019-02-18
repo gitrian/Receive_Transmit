@@ -7,11 +7,13 @@
 
 class Receive_Transmit{
 public:
-  Receive_Transmit(int pin);
-  void dot();
+  Receive_Transmit(int pin1,int pin2, bool receive);
+  void initialize();
   void dash();
 private:
-  int _pin;
+  int _pin1;
+  int _pin2;
+  bool _receive;
 };
 
 #endif
